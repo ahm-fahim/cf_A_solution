@@ -5,7 +5,7 @@
 [problem 4](https://codeforces.com/contest/1359/problem/A)
 [problem 5](https://codeforces.com/contest/1370/problem/A)
 [problem 6](https://codeforces.com/contest/1374/problem/A)
-[problem 7]
+[problem 7](https://codeforces.com/contest/1375/problem/A)
 [problem 8]
 [problem 9]
 [problem 10]

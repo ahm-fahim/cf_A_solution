@@ -64,5 +64,5 @@ int main()
 
     return 0;
 }
-// Problem link 
-// https://codeforces.com/contest/1352/problem/A
+
+// Problem link on readme file

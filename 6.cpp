@@ -34,47 +34,22 @@ using namespace std;
 #define optimize() ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
 #define endl '\n';
 #define ll long long int
+
 int main()
 {
     optimize();
-    int t;
-    cin >> t;
+    
+    ll tc;
+    cin >> tc;
 
-    while (t--)
-    {
-        ll n, k;
-        cin >> n >> k;
+    while(tc--){
+        ll x,y,n;
+        cin>> x>> y>> n;
 
-        ll odd = 0, even = 0;
+        ll p = (n-y)/x;
+        ll k = p*x+y;
 
-        for (ll i = 1; i <= n; i++)
-        {
-            ll p;
-            cin >> p;
-            (p % 2) ? odd++ : even++;
-        }
-
-        if (!odd)
-        {
-
-            cout << "No" << endl;
-        }
-        else
-        {
-            k--;
-            odd--;
-
-            while (k > 0)
-            {
-                if (odd >= 2 && k >= 2)
-                    odd -= 2, k -= 2;
-                else if (even)
-                    even--, k--;
-                else
-                    break;
-            }
-            (k) ? cout << "No\n" : cout << "Yes\n";
-        }
+        cout << k << endl;
     }
 
     return 0;

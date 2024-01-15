@@ -6,8 +6,8 @@
 [problem 5](https://codeforces.com/contest/1370/problem/A)
 [problem 6](https://codeforces.com/contest/1374/problem/A)
 [problem 7](https://codeforces.com/contest/1375/problem/A)
-[problem 8]
-[problem 9]
+[problem 8](https://codeforces.com/contest/1372/problem/A)
+[problem 9](https://codeforces.com/contest/1380/problem/A)
 [problem 10]
 [problem 11]
 [problem 12]

@@ -41,7 +41,17 @@ using namespace std;
 int main()
 {
     optimize();
+    ll tc;
+    cin>> tc;
+
+    while(tc--){
+        ll n;
+        cin>> n;
+
+        for(int i = 1;i <= n; i++) cout<< 1 << " ";
+        cout << endl;
+    }
 
     return 0;
 }
-
+// Problem link on readme file

@@ -41,7 +41,6 @@ using namespace std;
 int main()
 {
     optimize();
-
     int t;
     cin >> t;
 
@@ -49,16 +48,23 @@ int main()
         int n;
         cin >> n;
 
-        set<int> arr;
-        for (int i = 0; i < n;i++){
-            int a;
-            cin >> a;
-            arr.insert(a);
+        vector<int> arr(n);
+        unordered_map<int, int> freq;
+        for (int i = 0; i < n; i++){
+            cin >> arr[i];
+            freq[arr[i]]++;
         }
-        int sz = arr.size();
-        cout << (sz - (sz % 2 != n % 2)) << endl;
-    }
 
+        int ans = -1;
+
+        for (auto pair : freq) {
+            if (pair.second >= 3) {
+                ans = pair.first;
+                break;
+            }
+        }
+        cout <<ans<< endl;
+    }
     return 0;
 }
 

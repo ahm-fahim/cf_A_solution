@@ -41,24 +41,25 @@ using namespace std;
 int main()
 {
     optimize();
-
     int t;
     cin >> t;
 
     while(t--){
-        int n;
+        int n; // total friends
         cin >> n;
 
-        set<int> arr;
-        for (int i = 0; i < n;i++){
-            int a;
-            cin >> a;
-            arr.insert(a);
+        vector<int> arr(n);
+        int mn = INT_MAX, ans = 0;
+        for(int i = 0; i < n; i++) {
+            cin >> arr[i];
+            if(arr[i]<mn)
+                mn = arr[i];
         }
-        int sz = arr.size();
-        cout << (sz - (sz % 2 != n % 2)) << endl;
+        for(int i = 0; i < n; i++) 
+            ans += arr[i] - mn;
+        
+        cout << ans << endl;
     }
-
     return 0;
 }
 

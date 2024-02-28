@@ -41,7 +41,6 @@ using namespace std;
 int main()
 {
     optimize();
-
     int t;
     cin >> t;
 
@@ -49,14 +48,14 @@ int main()
         int n;
         cin >> n;
 
-        set<int> arr;
+        int sum = 0;
         for (int i = 0; i < n;i++){
             int a;
             cin >> a;
-            arr.insert(a);
+
+            sum += abs(a);
         }
-        int sz = arr.size();
-        cout << (sz - (sz % 2 != n % 2)) << endl;
+        cout << sum << endl;
     }
 
     return 0;

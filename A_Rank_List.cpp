@@ -38,27 +38,36 @@ using namespace std;
 #define mp make_pair
 #define all(x) x.begin(),x.end()
 
+bool cmp(const pair<int,int> &a, const pair<int, int> &b){
+    if(a.first > b.first)
+        return 1;
+    else if(a.first==b.first)
+        return (a.second < b.second);
+    return 0;
+}
+
 int main()
 {
     optimize();
+    int n, k;
+    cin >> n >> k;
 
-    int t;
-    cin >> t;
-
-    while(t--){
-        int n;
-        cin >> n;
-
-        set<int> arr;
-        for (int i = 0; i < n;i++){
-            int a;
-            cin >> a;
-            arr.insert(a);
-        }
-        int sz = arr.size();
-        cout << (sz - (sz % 2 != n % 2)) << endl;
+    vector<pair<int, int> > arr(n);
+    
+    for (int i = 0; i < n;i++){
+        cin >> arr[i].first >>  arr[i].second; 
     }
+
+    sort(arr.begin(), arr.end(), cmp);
+
+    int ans = 0;
+    for(auto i:arr){
+        if(i == arr[k-1])
+            ans++;
+    }
+    cout << ans << endl;
 
     return 0;
 }
 
+ 

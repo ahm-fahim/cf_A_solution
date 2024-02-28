@@ -41,7 +41,6 @@ using namespace std;
 int main()
 {
     optimize();
-
     int t;
     cin >> t;
 
@@ -49,16 +48,35 @@ int main()
         int n;
         cin >> n;
 
-        set<int> arr;
-        for (int i = 0; i < n;i++){
-            int a;
-            cin >> a;
-            arr.insert(a);
-        }
-        int sz = arr.size();
-        cout << (sz - (sz % 2 != n % 2)) << endl;
-    }
+        vector<int> arr(n);
+        for (int i = 0; i < n;i++)
+            cin >> arr[i];
 
+        int even=0, odd = 0;
+        for (int i = 0; i < n; i++)
+            (arr[i] % 2 == 0)?even++:odd++;
+        
+        int first_num = arr[0];
+
+        if(even==n || odd==n){
+            cout << "YES" << endl;
+            continue;
+        }
+
+        if(even<=odd && first_num % 2 != 0){
+            for (int i = 1; i <= n;i+=2)
+                arr[i] += 1;
+        }else{
+            for (int i = 0; i < n;i+=2)
+                arr[i] += 1;
+        }
+
+        int cnt1 = 0, cnt2 = 0;
+        for (int i = 0; i < n; i++)
+            (arr[i] % 2 == 0)?cnt1++:cnt2++;
+        
+        cout << ((cnt1==n || cnt2==n) ? "YES" : "NO") << endl;
+    }
     return 0;
 }
 

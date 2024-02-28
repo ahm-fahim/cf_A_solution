@@ -1,35 +1,4 @@
-# cf_A_solution
-[problem 1](https://codeforces.com/contest/1352/problem/A)
-[problem 2](https://codeforces.com/contest/1355/problem/A)
-[problem 3](https://codeforces.com/contest/1363/problem/A)
-[problem 4](https://codeforces.com/contest/1359/problem/A)
-[problem 5](https://codeforces.com/contest/1370/problem/A)
-[problem 6](https://codeforces.com/contest/1374/problem/A)
-[problem 7](https://codeforces.com/contest/1375/problem/A)
-[problem 8](https://codeforces.com/contest/1372/problem/A)
-[problem 9](https://codeforces.com/contest/1380/problem/A)
-[problem 10](https://codeforces.com/contest/1385/problem/A)
-[problem 11]
-[problem 12]
-[problem 13]
-[problem 14]
-[problem 15]
-[problem 16]
-[problem 17]
-[problem 18]
-[problem 19]
-[problem 20]
-[problem 6]
-[problem 6]
-[problem 6]
-[problem 6]
-[problem 6]
-[problem 6]
-[problem 6]
-[problem 6]
-[problem 6]
-[problem 6]
-[problem 6]
-[problem 6]
-[problem 6]
+# cf A,B,C,D problem link
+
+[cfttracker](https://cftracker.netlify.app/contests)
 

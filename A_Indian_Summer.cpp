@@ -41,23 +41,16 @@ using namespace std;
 int main()
 {
     optimize();
+    int n;
+    cin >> n;
 
-    int t;
-    cin >> t;
+    vector<pair<string, string> > s(n);
+    for (int i = 0; i < n;i++)
+        cin >> s[i].first >> s[i].second;
 
-    while(t--){
-        int n;
-        cin >> n;
-
-        set<int> arr;
-        for (int i = 0; i < n;i++){
-            int a;
-            cin >> a;
-            arr.insert(a);
-        }
-        int sz = arr.size();
-        cout << (sz - (sz % 2 != n % 2)) << endl;
-    }
+    sort(all(s));
+    int ans = unique(all(s)) - s.begin();
+    cout << ans;
 
     return 0;
 }

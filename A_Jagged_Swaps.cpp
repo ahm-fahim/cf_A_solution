@@ -38,26 +38,15 @@ void Okay(bool x){
 }
 //Solution 
 void solution(){
-    int n, k;
-    cin >> n >> k;
+    int n;
+    cin >> n;
 
     vector<int> arr(n);
     input(arr, n);
 
     bool ok = 0;
-    
-    if(k>1)
+    if(arr[0]==1)
         ok = 1;
-    else{
-        vector<int> tmp = arr;
-        sort(tmp.begin(), tmp.end());
-
-        if(tmp==arr)
-            ok = 1;
-        else
-            ok = 0;
-    }
-
     Okay(ok);
 }
 int main()

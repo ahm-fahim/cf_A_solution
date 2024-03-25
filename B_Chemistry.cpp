@@ -38,25 +38,23 @@ void Okay(bool x){
 }
 //Solution 
 void solution(){
-    int n, k;
-    cin >> n >> k;
+    int cnt[50];
+	int n,k;
+	string s;
+	cin>> n >> k >> s;
 
-    vector<int> arr(n);
-    input(arr, n);
+	for(int i=0;i<26;i++)cnt[i]=0;
 
+	for(int i=0;i<n;i++)
+		cnt[s[i]-'a']++;
+	
+	int ans=0;
+	for(int i=0;i<26;i++)
+		if(cnt[i]%2)ans++;
+	
     bool ok = 0;
-    
-    if(k>1)
+    if (ans <= k + 1)
         ok = 1;
-    else{
-        vector<int> tmp = arr;
-        sort(tmp.begin(), tmp.end());
-
-        if(tmp==arr)
-            ok = 1;
-        else
-            ok = 0;
-    }
 
     Okay(ok);
 }

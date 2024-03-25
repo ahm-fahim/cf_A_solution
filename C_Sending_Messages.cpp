@@ -38,25 +38,23 @@ void Okay(bool x){
 }
 //Solution 
 void solution(){
-    int n, k;
-    cin >> n >> k;
+    int n;
+    ll f, a, b;
+    cin >> n >> f >> a >> b;
 
-    vector<int> arr(n);
+    vector<int> arr(n+1);
     input(arr, n);
 
-    bool ok = 0;
-    
-    if(k>1)
-        ok = 1;
-    else{
-        vector<int> tmp = arr;
-        sort(tmp.begin(), tmp.end());
-
-        if(tmp==arr)
-            ok = 1;
-        else
-            ok = 0;
+    int prev = 0;
+    for (int i = 0; i < n; i++)
+    {
+        f -=min(b, (arr[i]-prev) * a);
+        prev = arr[i];
     }
+
+    bool ok = 0;
+    if(f>0)
+        ok = 1;
 
     Okay(ok);
 }

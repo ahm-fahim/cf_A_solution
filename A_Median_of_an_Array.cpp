@@ -38,27 +38,24 @@ void Okay(bool x){
 }
 //Solution 
 void solution(){
-    int n, k;
-    cin >> n >> k;
+    int n;
+    cin >> n;
 
-    vector<int> arr(n);
+    vector<int> arr(n+1);
+    int ans = 0 ;
     input(arr, n);
+    sort ( arr.begin() , arr.end());
 
-    bool ok = 0;
-    
-    if(k>1)
-        ok = 1;
-    else{
-        vector<int> tmp = arr;
-        sort(tmp.begin(), tmp.end());
-
-        if(tmp==arr)
-            ok = 1;
+    int mid = (n + 1) / 2;
+    for (int i = mid; i <= n; i++)
+    {
+        if ( arr[i] == arr[mid])ans++;
         else
-            ok = 0;
+            break;
     }
 
-    Okay(ok);
+    cout << ans << br;
+    
 }
 int main()
 {

@@ -18,7 +18,7 @@ using namespace std;
 #define pb push_back
 
 // input
-void input(vector<int>& arr, int n) {
+void input(vector<ll>& arr, int n) {
     for (int i = 0; i < n; i++)
         cin >> arr[i];
 }
@@ -38,27 +38,25 @@ void Okay(bool x){
 }
 //Solution 
 void solution(){
-    int n, k;
-    cin >> n >> k;
+    int n;
+    cin >> n;
 
-    vector<int> arr(n);
-    input(arr, n);
+    vector<ll> a(n), b(n);
+    input(a, n);
+    input(b, n);
 
-    bool ok = 0;
-    
-    if(k>1)
-        ok = 1;
-    else{
-        vector<int> tmp = arr;
-        sort(tmp.begin(), tmp.end());
+    ll x = *min_element(a.begin(), a.end());
+    ll y = *min_element(b.begin(), b.end());
 
-        if(tmp==arr)
-            ok = 1;
-        else
-            ok = 0;
+    ll sum1 = 0;
+    ll sum2 = 0;
+
+    for (int i = 0; i < n; i++)
+    {
+        sum1 += a[i];
+        sum2 += b[i];
     }
-
-    Okay(ok);
+    cout << min(sum1+y*n,sum2+x*n)<<br;
 }
 int main()
 {

@@ -38,27 +38,22 @@ void Okay(bool x){
 }
 //Solution 
 void solution(){
-    int n, k;
-    cin >> n >> k;
+    int n, x;
+    cin >> n >> x;
 
     vector<int> arr(n);
     input(arr, n);
 
-    bool ok = 0;
-    
-    if(k>1)
-        ok = 1;
-    else{
-        vector<int> tmp = arr;
-        sort(tmp.begin(), tmp.end());
+    int mx = INT_MIN;
 
-        if(tmp==arr)
-            ok = 1;
-        else
-            ok = 0;
+    for (int i = 1; i < n;i++){
+        int diff = arr[i] - arr[i - 1];
+        mx = max(mx, diff);
     }
 
-    Okay(ok);
+    mx = max(mx, arr[0] - 0); // initial point to n=1 diff
+    mx = max(mx, 2 * (x - arr[n - 1])); // last distance make double
+    cout << mx <<br;
 }
 int main()
 {

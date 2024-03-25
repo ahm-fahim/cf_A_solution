@@ -17,34 +17,10 @@ using namespace std;
 int main()
 {
     make_fast();
-    int t;
-    cin >> t;
+    long long n, k;
+    cin >> n >> k;
 
-    while(t--){
-        int n;
-        cin >> n;
-
-        if(n%2 != 0){
-            cout << "NO" << br;
-            continue;
-        }
-        else
-        {
-            cout << "YES" << br;
-            int i = 0;
-
-            while(n){
-                if(i%2==0){
-                    cout << "AA";
-                    i = 1;
-                }else{
-                    cout << "BB";
-                    i = 0;
-                }
-                n -= 2;
-            }
-            cout << br;
-        }
-    }
+    cout <<((n+1)/2 >= k ? k*2-1 : 2 * (k-(n+1)/2));
+    
     return 0;
 }
